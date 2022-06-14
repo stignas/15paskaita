@@ -30,7 +30,7 @@ header {
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   min-width: 160px;
-  z-index: -1;
+  z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
@@ -78,6 +78,10 @@ main {
 
 main section:first-child {
   padding-bottom: 20px;
+}
+
+main img {
+  max-width: 100%;
 }
 
 .bottom {
@@ -133,4 +137,49 @@ footer a {
 
 footer div {
   padding-left: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .dropdown {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+  }
+
+  .logo {
+    width: 25%;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  nav a {
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr 2fr;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px;
+  }
+
+  main section:nth-child(2) {
+    align-self: center;
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
